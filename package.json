@@ -5,10 +5,21 @@
   "repository": "https://github.com/sonlv10/cv.git",
   "author": "sonle <son.le@hdwebsoft.co>",
   "license": "MIT",
+  "scripts": {
+    "serve": "gatsby build && NODE_ENV=production gatsby serve",
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "lint": "eslint . --ext .js --cache",
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@wkocjan/gatsby-theme-intro": "^2.0.1",
     "gatsby": "^3.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.0"
   }
 }
